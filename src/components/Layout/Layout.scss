@@ -1,0 +1,14 @@
+.layout-container {
+    height: 100%;
+    width: 100%;
+
+    .content-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 2rem;
+        .children {
+        }
+    }
+}

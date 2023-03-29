@@ -1,0 +1,42 @@
+.header-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem;
+    background-color: var(--top-bar-bg);
+    box-shadow: 0px 1px 12px black;
+    // height: 10%;
+
+    .theme-mode {
+        color: var(--secondary-color);
+    }
+
+    .home-page-link {
+        margin-right: 70%;
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+    }
+
+    .change-theme-mode-btn {
+        background-color: transparent;
+        width: 25px;
+        i {
+            font-size: 2em;
+            transition: all 1.2s;
+
+            &.light-icon {
+                color: hsl(50, 85%, 55%);
+            }
+
+            &.dark-icon {
+                color: #b9c3f9;
+            }
+        }
+    }
+
+    .sign-link a {
+        color: white;
+    }
+}

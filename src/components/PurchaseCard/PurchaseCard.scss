@@ -1,0 +1,41 @@
+.purchase-card-container {
+    height: 280px;
+    width: 250px;
+
+    background-color: #2c2c2c;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    color: rgb(209, 209, 209);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    button {
+        height: 30px;
+        width: 100%;
+
+        font-size: 12px;
+        color: #fff;
+        background-color: #414346;
+        border: none;
+        border-radius: 9px;
+        outline: 0;
+        margin: 2px;
+
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover.delete-btn {
+            background-color: #870808
+        }
+
+        &:hover.purchase-btn {
+            background-color: #083c87
+        }
+    }
+}

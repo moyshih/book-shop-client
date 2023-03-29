@@ -1,0 +1,19 @@
+.purchase-list-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        margin: 2rem 0;
+        color: white;
+    }
+
+    .purchase-list{
+        display: flex;
+        justify-content: center; 
+        flex-wrap: wrap;
+        gap: 4rem;
+        width: 100%;
+    }
+}

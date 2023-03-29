@@ -1,0 +1,42 @@
+// @import '@fontsource/assistant';
+// Fonts
+$font-assist-bold: "Assistant Bold";
+$font-assist-semibold: "Assistant SemiBold";
+$font-assist-reg: "Assistant Regular";
+$font-oswald-reg: "Oswald Regular";
+$font-avenir-next-bold: "Avenir Next Bold";
+
+/* Fonts */
+$global-font-assistant-bold: #{$font-assist-bold};
+$global-font-assistant-semibold: #{$font-assist-semibold};
+$global-font-assistant-reg: #{$font-assist-reg};
+$global-font-oswald-reg: #{$font-oswald-reg};
+$global-font-avenir-next-bold: #{$font-avenir-next-bold};
+
+// Import the assistant font
+/* hebrew */
+@font-face {
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/assistant/v6/2sDcZGJYnIjSi6H75xkzamW5O7w.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+/* hebrew */
+@font-face {
+  font-family: 'Assistant SemiBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/assistant/v6/2sDcZGJYnIjSi6H75xkzamW5O7w.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+/* hebrew */
+@font-face {
+  font-family: 'Assistant Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/assistant/v6/2sDcZGJYnIjSi6H75xkzamW5O7w.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}

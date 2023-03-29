@@ -1,0 +1,62 @@
+@use "./common/styles" as *;
+
+*,
+*:before,
+*:after {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, 'FontAwesome';
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+// :root {
+//     --primary-color: #{$primary-light};
+//     --secondary-color: #{$secondary-light};
+// }
+
+// [data-theme='dark'] {
+
+//     --primary-color: black;
+//     --secondary-color: #{$secondary-dark};
+// }
+
+.app {
+    position: absolute;
+    height: 100vh;
+    overflow-y: auto;
+    width: 100vw;
+
+    @mixin background-base {
+        content: "";
+        position: fixed;
+        z-index: -1;
+        background-image: url('./assets/images/app-bg-img-light.png');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &.light::before {
+        @include background-base;
+    }
+
+    &.dark::before {
+        @include background-base;
+        filter: brightness(0.5);
+    }
+}

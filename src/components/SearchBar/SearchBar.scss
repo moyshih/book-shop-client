@@ -1,0 +1,50 @@
+.search-bar-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #414346;
+    margin: 1rem;
+    padding: .5rem;
+    color: #03045e;
+    border-radius: 8px;
+
+    &:has(input:focus), &:hover {
+        background-color: #1b1c24;
+    }
+
+    input {
+        padding-left: 1rem;
+        border: none;
+        font-size: 1.2rem;
+        width: 90%;
+        height: 100%;
+        background-color: transparent;
+        color: white;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .icon-container {
+        background-color: #3f414d;
+        padding: 0.6rem;
+        margin-right: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+            // background-color: #03045e;
+        }
+
+        i {
+            color: white;
+            font-size: 1rem;
+        }
+    }
+}

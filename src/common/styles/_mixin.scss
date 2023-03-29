@@ -1,0 +1,20 @@
+@mixin flex-center($direction: "row") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: unquote($direction);
+}
+
+@mixin input-base {
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    border: 1px solid #9b9da2;
+    padding: 0 10px;
+    padding-left: 30px;
+    outline: 0;
+    font-size: 13px;
+    background-color: #434343;
+    color: white;
+}

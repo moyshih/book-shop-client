@@ -1,0 +1,116 @@
+/* #region Colors */
+
+/* #region Light */
+
+$primary-light: white;
+$secondary-light: black;
+
+$top-bar-shadow-light: 0px 1px 12px black;
+$app-bg-light: linear-gradient(0.25turn, #343442, #0a1e2a, #051824, #0a1e2a, #343442);
+/* #endregion */
+
+/* #region Dark */
+
+$primary-dark: black;
+$secondary-dark: white;
+
+$app-bg-dark: linear-gradient(0.25turn, #343442, #0a1e2a, #051824, #0a1e2a, #343442);
+$top-bar-shadow-dark: 0px 1px 12px black;
+
+/* #endregion */
+
+:root {
+  --primary-color: #{$primary-light};
+  --secondary-color: #{$secondary-light};
+  --app-bg: #{$app-bg-light};
+  --top-bar-bg: #ff3434;
+}
+
+[data-theme='dark'] {
+  --primary-color: #{$primary-dark};
+  --secondary-color: #{$secondary-dark};
+  --app-bg: #{$app-bg-dark};
+  --top-bar-bg: #0c141b;
+}
+
+//Primary System Colors
+$primary-green1: #00cd98;
+$primary-white1: #ffffff;
+$primary-blue1: #04539b;
+$primary-light-blue1: #509eb4;
+
+$primary-light-grey1: #c3c6d1;
+$primary-light-grey2: rgb(191, 197, 210);
+$primary-light-grey3: #d8d8d8;
+
+$primary-dark-grey1: #979797;
+$primary-dark-grey2: #858997;
+$primary-dark-grey3: #858997;
+$primary-dark-grey4: #1d2024;
+$primary-dark-grey5: rgba(43, 43, 43, 0.7);
+
+//Text colors
+$text-color-primary: #000000;
+$text-color-white: #ffffff;
+$text-color-grey: #666666;
+
+// Semantic Colors
+$color-highlight: #02adda;
+$color-disabled: $text-color-grey;
+$color-success: $color-highlight; // for now they are the same.
+$color-danger: #ff431e;
+
+// Background Colors
+$background-primary-solid: rgb(29, 29, 29);
+$background-primary-strong: rgba(29, 29, 29, 0.7);
+$background-primary-reg: rgba(29, 29, 29, 0.6);
+$background-primary-soft: rgba(29, 29, 29, 0.35);
+
+/* #region System Colors */
+
+$system-yellow: #FFDC00;
+$system-blue: #006FFF;
+$system-red: #B31D00;
+$system-light-blue: #02ADDA;
+$system-gray: #B6B6B6;
+$system-red-activation: #FA2900;
+$system-green: #05AF8C;
+$system-pink: #FF009E;
+
+/* #endregion */
+
+/* #endregion */
+
+/* Background Colors */
+$global-bg-solid: #{$background-primary-solid};
+$global-bg-strong: #{$background-primary-strong};
+$global-bg-reg: #{$background-primary-reg};
+$global-bg-soft: #{$background-primary-soft};
+
+/* Foreground Colors */
+$global-text-primary: #{$text-color-primary};
+$global-text-disabled: #{$text-color-grey};
+$global-text-highlighted: #{$text-color-grey};
+
+
+/* Colors - Behaviors */
+$global-color-highlight: #{$color-highlight};
+$global-color-disabled: #{$color-disabled};
+$global-color-success: #{$color-success};
+$global-color-danger: #{$color-danger};
+
+/* Colors - Primary */
+$primary-green1: #{$primary-green1};
+$primary-white1: #{$primary-white1};
+$primary-blue1: #{$primary-blue1};
+$primary-light-blue1: #{$primary-light-blue1};
+
+$primary-light-grey1: #{$primary-light-grey1};
+$primary-light-grey2: #{$primary-light-grey2};
+$primary-light-grey3: #{$primary-light-grey3};
+
+$primary-dark-grey1: #{$primary-dark-grey1};
+$primary-dark-grey2: #{$primary-dark-grey2};
+$primary-dark-grey3: #{$primary-dark-grey3};
+$primary-dark-grey4: #{$primary-dark-grey4};
+$primary-dark-grey5: #{$primary-dark-grey5};
