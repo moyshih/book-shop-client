@@ -8,6 +8,7 @@ interface LayoutProps {
 }
 
 function Layout({ children }: LayoutProps) {
+    
     return (
         <>
             <div className='layout-container'>
