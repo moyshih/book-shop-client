@@ -11,7 +11,7 @@ const login = async (email: string, password: string) => {
         return res;
     } catch (err) {
         console.error(err);
-        return Promise.reject();
+        return Promise.reject(err);
     }
 };
 
@@ -21,7 +21,7 @@ const register = async (email: string, password: string) => {
         return res;
     } catch (err) {
         console.error(err);
-        return Promise.reject();
+        return Promise.reject(err);
     }
 };
 

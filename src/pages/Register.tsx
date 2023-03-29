@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import authApi from '../api/authApi';
 import authService from '../services/authService';
 import SignForm from '../components/SignForm/SignForm';
+import { AxiosResponse } from 'axios';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -12,12 +13,16 @@ const Register = () => {
             navigate('/dashboard')
     }, [])
 
-    const registerUser = (email: string, password: string) => {
-        authApi.register(email, password)
-            .then((_) => {
-                navigate(`/login`);
-            })
-            .catch(_ => { })
+    const registerUser = async (email: string, password: string): Promise<AxiosResponse<any, any>> => {
+        return (
+            authApi.register(email, password)
+                .then(res => {
+                    navigate(`/login`);
+                    return res;
+                })
+                .catch(err => {
+                    return Promise.reject(err)
+                }))
     };
 
     return (

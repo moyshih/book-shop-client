@@ -3,19 +3,22 @@ import './SignForm.scss';
 import { useNavigate, Link } from 'react-router-dom';
 import authService from '../../services/authService';
 import authApi from '../../api/authApi';
+import { AxiosResponse } from 'axios';
 
 interface SignFormProps {
     mainText: string,
     buttonText: string,
     linkText: string,
-    handleSubmit: (email: string, password: string) => void,
+    handleSubmit: (email: string, password: string) => Promise<AxiosResponse<any, any>>,
     linkPath: string,
 }
 
-const SignForm = ({ mainText, buttonText, linkText, handleSubmit, linkPath}: SignFormProps) => {
+const SignForm = ({ mainText, buttonText, linkText, handleSubmit, linkPath }: SignFormProps) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isPasswordShowing, setIsPasswordShowing] = useState(false);
+    const [errMsg, setErrMsg] = useState('');
+    const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -32,7 +35,14 @@ const SignForm = ({ mainText, buttonText, linkText, handleSubmit, linkPath}: Sig
 
                 <form onSubmit={(e) => {
                     e.preventDefault();
-                    handleSubmit(email, password);
+                    handleSubmit(email, password).catch(err => {
+
+                        console.log("|| err:", err);
+
+                        setErrMsg(err.response.data.message);
+
+                    }
+                    )
                 }}>
                     <div className="input-text">
                         <input
@@ -40,7 +50,8 @@ const SignForm = ({ mainText, buttonText, linkText, handleSubmit, linkPath}: Sig
                             placeholder="Enter your email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            name="email" />
+                            name="email"
+                            required />
                         <i className="fa fa-envelope"></i>
 
                         {/* <label htmlFor="email">Email</label>
@@ -58,7 +69,8 @@ const SignForm = ({ mainText, buttonText, linkText, handleSubmit, linkPath}: Sig
                             placeholder="Enter your password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            name="password" />
+                            name="password"
+                            required />
                         <i className="fa fa-lock"></i>
                         <i onClick={() => setIsPasswordShowing(prev => !prev)} className={`fa ${isPasswordShowing ? "fa-eye-slash" : "fa-eye"}`}></i>
 
@@ -70,6 +82,7 @@ const SignForm = ({ mainText, buttonText, linkText, handleSubmit, linkPath}: Sig
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder='Password' /> */}
                     </div>
+                    <p className='err-msg' >{errMsg}</p>
                     <div className="submit-btn">
                         <button type="submit">{buttonText}</button>
                     </div>

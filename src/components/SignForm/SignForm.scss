@@ -80,8 +80,17 @@
         cursor: pointer
     }
 
+    .err-msg {
+        min-height: 20px;
+        text-align: center;
+        color: rgb(250, 89, 89);
+        margin: .5rem 0;
+
+        font-size: 14px;
+    }
+
     .submit-btn {
-        margin-top: 30px;
+        margin-top: 20px;
         display: flex;
         justify-content: center;
 
